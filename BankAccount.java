@@ -4,18 +4,42 @@ public class BankAccount {
     private int accountID;
     private String userName;
 
+    private static int nextAvailID = 1;
+
     // Java Setup Classes
 
     public BankAccount() {
         balance = 0;
-        accountID = 0; // make random id
+        accountID = nextAvailID;
         userName = "";
+        nextAvailID++;
     }
 
+    public BankAccount(String user) {
+        balance = 0;
+        accountID = nextAvailID;
+        userName = user;
+        nextAvailID++;
+    }
+
+    public BankAccount(String user, double bal) {
+        balance = bal;
+        accountID = nextAvailID;
+        userName = user;
+        nextAvailID++;
+    }
+/*
     public BankAccount(int accountIDIn, String user) {
         balance = 0;
         accountID = accountIDIn;
         userName = user;
+    }
+*/
+    public BankAccount(BankAccount other){
+        balance = other.getBal();
+        accountID = nextAvailID;
+        userName = other.getUsername();
+        nextAvailID++;
     }
 
     public String toString() {
@@ -54,7 +78,7 @@ public class BankAccount {
 
     public void setBal(double newBal) {
         if (checkID()) {
-            System.out.print("Requires Accound ID. Balance is $" + balance);
+            System.out.println("Requires Account ID. Balance is $" + balance);
             return;
         }
         balance = newBal;
@@ -62,7 +86,7 @@ public class BankAccount {
 
     public void deposit(double addToBal){
         if (checkID()) {
-            System.out.print("Requires Accound ID. Balance is $" + balance);
+            System.out.println("Requires Account ID. Balance is $" + balance);
             return;
         } 
         balance += addToBal;
@@ -70,10 +94,14 @@ public class BankAccount {
 
     public void withdrawl(double rmFromBal){
         if (checkID()) {
-            System.out.print("Requires Accound ID. Balance is $" + balance);
+            System.out.println("Requires Accound ID. Balance is $" + balance);
             return;
         } 
         balance -= rmFromBal;
+    }
+
+    public void setUsername(String newUsername){
+        userName = newUsername;
     }
 
 }
