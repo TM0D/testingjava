@@ -1,13 +1,24 @@
 // import java.util.Scanner;
-// import u5classes.*;
+import u5classes.*;
 // import archive.*;
 public class Main {
   public static void main(String[] args) {
-    testing();
+    testingHW();
   }
   
   // CURRENT
-  public static void testing() {
+  public static void testingHW() {
+    HiddenWord puzzle = new HiddenWord("WELLERMAN"); // 9
+
+    System.out.println(puzzle.getGuess("WESTLTOWN"));
+    System.out.println(puzzle.getGuess("WELLSTOWN"));
+    System.out.println(puzzle.getGuess("WELLERTON"));
+    System.out.println(puzzle.getGuess("WELLERMIN"));
+    System.out.println(puzzle.getGuess("WELLERMAN"));
+
+  }
+
+  public static void testingBA() {
     BankAccount b1 = new BankAccount("Test");
     BankAccount nullAccount = new BankAccount();
 
