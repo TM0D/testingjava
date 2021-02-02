@@ -5,7 +5,7 @@ public class HiddenWord {
         this.word = word;
     }
 
-    public String getGuess(String guess) {
+    public String getHint(String guess) {
         String output = "";
         for (int i = 0; i < word.length(); i++) {
             if (guess.charAt(i) == word.charAt(i)) {

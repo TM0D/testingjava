@@ -10,11 +10,11 @@ public class Main {
   public static void testingHW() {
     HiddenWord puzzle = new HiddenWord("WELLERMAN"); // 9
 
-    System.out.println(puzzle.getGuess("WESTLTOWN"));
-    System.out.println(puzzle.getGuess("WELLSTOWN"));
-    System.out.println(puzzle.getGuess("WELLERTON"));
-    System.out.println(puzzle.getGuess("WELLERMIN"));
-    System.out.println(puzzle.getGuess("WELLERMAN"));
+    System.out.println(puzzle.getHint("WESTLTOWN"));
+    System.out.println(puzzle.getHint("WELLSTOWN"));
+    System.out.println(puzzle.getHint("WELLERTON"));
+    System.out.println(puzzle.getHint("WELLERMIN"));
+    System.out.println(puzzle.getHint("WELLERMAN"));
 
   }
 
