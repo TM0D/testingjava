@@ -138,4 +138,36 @@ public class oldAPCSACode {
     }
     return true;
   }
+
+  public static void DayOTW(){
+      Scanner in = new Scanner(System.in);
+  
+      System.out.println("Enter the date: (mm dd yyyy)");
+  
+      int mm = in.nextInt();
+      int dd = in.nextInt();
+      int yyyy = in.nextInt();
+      System.out.println("You entered: " + mm + "/" + dd + "/" + yyyy);
+      in.close();
+  
+      int dotw;
+  
+      int a = ((14 - mm)/12);
+      yyyy = yyyy - a;
+      mm = mm + 12 * a - 2;
+  
+      dotw = (dd + yyyy + (yyyy / 4) - (yyyy / 100) + (yyyy / 400) + (31 * mm) / 12) % 7;
+  
+     switch(dotw) {
+      case 0 : System.out.print("The day is Sunday."); break;
+      case 1 : System.out.print("The day is Monday."); break;
+      case 2 : System.out.print("The day is Tuesday."); break;
+      case 3 : System.out.print("The day is Wednesday."); break;
+      case 4 : System.out.print("The day is Thursday."); break;
+      case 5 : System.out.print("The day is Friday."); break;
+      case 6 : System.out.print("The day is Saturday."); break;
+      default : System.out.print("The day could not be found."); break;
+     }
+  
+  }
 }
