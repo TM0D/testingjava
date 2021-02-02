@@ -1,4 +1,5 @@
 package u5classes;
+
 public class BankAccount {
     private double balance;
     private int accountID;
@@ -104,4 +105,25 @@ public class BankAccount {
         userName = newUsername;
     }
 
+    public static void testingBA() {
+        BankAccount b1 = new BankAccount("Test");
+        BankAccount nullAccount = new BankAccount();
+    
+        System.out.println(b1);
+        System.out.println(nullAccount);
+    
+        b1.setBal(546);
+    
+        System.out.println(b1.getAccountID());
+        System.out.println(b1.getUsername());
+        System.out.println(b1.getBal());
+    
+        b1.withdrawl(46);
+    
+        System.out.println(b1);
+    
+        nullAccount.setBal(534);
+    
+        System.out.println(nullAccount);
+      }
 }

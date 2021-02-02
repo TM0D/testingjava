@@ -1,3 +1,5 @@
+package u5classes;
+
 public class HiddenWord {
     private String word;
 
@@ -18,4 +20,15 @@ public class HiddenWord {
         }
         return output;
     }
+
+    public static void testingHW() {
+        HiddenWord puzzle = new HiddenWord("WELLERMAN"); // 9
+    
+        System.out.println(puzzle.getHint("WESTLTOWN"));
+        System.out.println(puzzle.getHint("WELLSTOWN"));
+        System.out.println(puzzle.getHint("WELLERTON"));
+        System.out.println(puzzle.getHint("WELLERMIN"));
+        System.out.println(puzzle.getHint("WELLERMAN"));
+    
+      }
 }
