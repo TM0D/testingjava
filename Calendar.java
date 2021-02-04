@@ -1,15 +1,15 @@
-public class Date {
+public class Calendar {
     private int day;
     private int month;
     private int year;
 
-    public Date() {
+    public Calendar() {
         day = 1;
         month = 1;
         year = 1990;
     }
 
-    public Date(int dy, int mo, int yr) {
+    public Calendar(int dy, int mo, int yr) {
         day = dy;
         month = mo;
         year = yr;
